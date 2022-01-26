@@ -5,6 +5,8 @@ import { useHistory, Link } from "react-router-dom";
 import { useAuthContext } from "../context/Authentication";
 
 import styles from "../styles/todo.module.scss";
+import usePersistedState from "../utils/persistedState";
+
 interface TasksType {
   id: number;
   title: string;
@@ -21,21 +23,17 @@ export function ToDoList() {
       : JSON.parse(localStorage.getItem("@Todo/arrayTasks") as string)
   );
 
-  const [taskTitle, setTaskTitle] = useState("");
+  const [taskTitle, setTaskTitle] = usePersistedState("Todo/@taskTitle", "");
 
   const history = useHistory();
 
   useEffect(() => {
     document.title = "Nestec | To.Do";
     !auth && history.push("/");
-
-    localStorage.setItem("@Todo/arrayTasks", JSON.stringify([]));
   }, []);
 
   useEffect(() => {
     localStorage.setItem("@Todo/arrayTasks", JSON.stringify(arrayTasks));
-
-    JSON.parse(localStorage.getItem("@Todo/arrayTasks") as string);
   }, [arrayTasks]);
 
   function addTask() {
