@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { createContext, useContext, useEffect } from "react";
 import usePersistedState from "../utils/persistedState";
 
@@ -10,6 +11,7 @@ interface AuthContextType {
   RouteAuthentication: () => void;
   themeState: boolean;
   changeTheme: () => void;
+  setAuth: (bool: boolean) => void;
 }
 
 const AuthContext = createContext({} as AuthContextType);
@@ -51,7 +53,7 @@ function AuthProvider({ children }: Props) {
 
   return (
     <AuthContext.Provider
-      value={{ auth, RouteAuthentication, changeTheme, themeState }}
+      value={{ auth, RouteAuthentication, changeTheme, themeState, setAuth }}
     >
       {children}
     </AuthContext.Provider>
