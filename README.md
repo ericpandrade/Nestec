@@ -5,6 +5,24 @@
 # Nestec
 
 <span style="font-family: 'Poppins', sans-serif;font-size:9pt">
+Realização do teste seletivo da Nestec. Nesse projeto, criei uma to-do-list utilizando diversos fundamentos do react como: <br/> 
+• useState 
+<br/> 
+• Ciclo de Vida do React
+<br/><br/> 
+Também fiz o acréscimo de alguns conceitos como: 
+<br/><br/>
+• React-Router-Dom (useHistory + Rotas)
+<br/>
+• Autenticação de rota 
+<br/>
+• Mudança de Tema do Layout 
+<br/>
+• Utilização do localStorage do Google para armazenar as tasks com o PersistedState
+<br/>
+• Responsividade
+<br />
+• Validação do campo do input
 
 </span>
 
@@ -75,11 +93,39 @@ Start the server
 
 <br />
 
+![Design Desktop Home Light](public/Designs/Desktop/HomePageLight.jpeg)
+
 <br/>
+
+![Design Desktop Home Dark](public/Designs/Desktop/HomePageDark.jpeg)
+
+<br />
+
+![Design Desktop To.Do Light](public/Designs/Desktop/ToDoPageLight.jpeg)
+
+<br/>
+
+![Design Desktop To.Do Dark](public/Designs/Desktop/ToDoPageDark.jpeg)
+
+<br />
 
 ### **Mobile**
 
 <br />
+
+![Design Desktop Home Light Mobile](public/Designs/Mobile/HomePageLightMobile.jpeg)
+
+<br />
+
+![Design Desktop Home Dark Mobile](public/Designs/Mobile/HomePageDarkMobile.jpeg)
+
+<br />
+
+![Design Desktop To.Do Light Mobile](public/Designs/Mobile/ToDoPageLightMobile.jpeg)
+
+<br />
+
+![Design Desktop To.Do Dark Mobile](public/Designs/Mobile/ToDoPageDarkMobile.jpeg)
 
 <br/>
 <br/>
