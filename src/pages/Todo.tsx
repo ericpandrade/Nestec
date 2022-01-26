@@ -5,8 +5,6 @@ import { useHistory, Link } from "react-router-dom";
 import { useAuthContext } from "../context/Authentication";
 
 import styles from "../styles/todo.module.scss";
-import usePersistedState from "../utils/persistedState";
-
 interface TasksType {
   id: number;
   title: string;
