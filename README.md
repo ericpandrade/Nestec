@@ -32,7 +32,7 @@ Também fiz o acréscimo de alguns conceitos como:
 ## Demo
 
 <span style="font-family: 'Poppins', sans-serif;font-size:9pt">
-
+Você pode acompanhar o site pelo Link: https://nestec-ericpandrade.vercel.app/todo
 </span>
 
 <br/>

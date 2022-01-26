@@ -18,10 +18,12 @@ export function ToDoList() {
     useAuthContext();
 
   const [arrayTasks, setArrayTasks] = useState<TasksType[]>(
-    JSON.parse(localStorage.getItem("@Todo/arrayTasks") as string)
+    localStorage.getItem("@Todo/arrayTasks") === null
+      ? []
+      : JSON.parse(localStorage.getItem("@Todo/arrayTasks") as string)
   );
 
-  const [taskTitle, setTaskTitle] = usePersistedState("Todo/@taskTitle", "");
+  const [taskTitle, setTaskTitle] = useState("");
 
   const history = useHistory();
 
@@ -29,8 +31,14 @@ export function ToDoList() {
     document.title = "Nestec | To.Do";
     !auth && history.push("/");
 
-    localStorage.setItem("@Todo/arrayTasks", JSON.stringify(arrayTasks));
+    localStorage.setItem("@Todo/arrayTasks", JSON.stringify([]));
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("@Todo/arrayTasks", JSON.stringify(arrayTasks));
+
+    JSON.parse(localStorage.getItem("@Todo/arrayTasks") as string);
+  }, [arrayTasks]);
 
   function addTask() {
     if (taskTitle.trim() === "") return window.alert("Please enter a title");
