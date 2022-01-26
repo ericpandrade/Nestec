@@ -14,16 +14,18 @@
   --todo-header: #28415d;
   --todo-task-table: #fff;
   --todo-button: #28415d;
+  --todo-title: #28415d;
 }
 
 :root.darkTheme {
   --background: #44475a;
   --primary: #fff;
   --text-button: #f8f8f2;
-  --todo-background: #44475a;
+  --todo-background: rgb(68, 71, 90, 0.62);
   --todo-header: #282a36;
-  --todo-task-table: #bbbbbf;
+  --todo-task-table: #bdbdc2;
   --todo-button: #ff5555;
+  --todo-title: #fbfbff;
 }
 
 @media (max-width: 1080px) {
